@@ -31,6 +31,11 @@ header{
     z-index: 100;
     background-color:  azure;
 }
+#menu-icon{
+    font-size: 3.6rem;
+    color: #1f242d;
+    display: none;
+}
 .logo{
     font-size: 2.5rem;
     font-weight: 600;
@@ -196,7 +201,11 @@ footer p{
     }
 }
 @media (max-width:768px){
+    #menu-icon{
+        display: block;
+    }
     .navbar{
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -205,8 +214,15 @@ footer p{
         background-color: white;
         border-top: .1rem solid black;
         box-shadow: 0 .5rem 1rem black;
+        
     }
+    .navbar.active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    
 }
-
-
-
