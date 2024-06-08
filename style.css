@@ -381,23 +381,8 @@ footer{
 }
 
 
-@media(max-width:1200px){
-    html{
-        font-size: 55%;
-        }
-}
-@media (max-width:991px){
-    header{
-        padding: 2rem 3%;
-    }
-    section{
-        padding: 10rem 3% 2rem;
-    }
-    footer{
-        padding: 2rem 3%;
-    }
-}
-@media (max-width: 1200px) {
+
+@media(max-width: 1200px) {
     html {
         font-size: 55%;
     }
@@ -408,9 +393,10 @@ footer{
         padding: 2rem 3%;
     }
 
-    header .logo{
+    header .logo {
         display: none;
     }
+
     section {
         padding: 10rem 3% 2rem;
     }
@@ -429,28 +415,48 @@ footer{
     #menu-icon {
         display: block;
         color: white;
+        font-size: 3.5rem;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
     }
 
     nav {
         display: none;
+        flex-direction: column;
+        align-items: center;
         position: absolute;
-        top: 100%;
+        top: 70px; 
         left: 0;
         width: 100%;
         padding: 1rem;
         background-color: white;
         border-top: 0.1rem solid black;
         box-shadow: 0 0.5rem 1rem black;
+        z-index: 100;
     }
 
     nav.active {
-        display: block;
+        display: flex;
     }
 
     nav a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1rem 0;
+        color: black;
+    }
+
+    .home {
+        padding-top: 8rem; 
+
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home h3 {
+        font-size: 20px;
     }
 
     .about {
@@ -461,7 +467,7 @@ footer{
     .about-content,
     .about img {
         max-width: 100%;
-        object-fit: cover   ;
+        object-fit: cover;
         padding: 10px;
         border-radius: 40px;
     }
@@ -470,32 +476,122 @@ footer{
         font-size: 40px;
     }
 
-    .home h1 {
-        font-size: 90px;
+    .service-containers,
+    .other-services .service-containers {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .home h3 {
-        font-size: 20px;
+    .service {
+        width: 100%;
     }
 
-    .other-services h1 {
-        font-size: 40px;
+    .contact {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
     }
 
     .contact-form input,
     .contact-form textarea {
         width: 90%;
     }
-    .footercontact h3{
-        font-size: 20px;
-    }
 
     .packages-row {
         flex-direction: column;
+        align-items: center;
     }
 
     .package {
         width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .footercontact h3 {
+        font-size: 20px;
+    }
+
+    .contact-icon a {
+        font-size: 3rem;
+    }
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        padding: 2rem 5%;
+    }
+
+    #menu-icon {
+        display: block;
+        color: white;
+        font-size: 3rem;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background-color: white;
+        border-top: 0.1rem solid black;
+        box-shadow: 0 0.5rem 1rem black;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: black;
+    }
+
+    .home {
+        padding-top: 7rem; 
+    }
+
+    .home h1 {
+        font-size: 60px;
+    }
+
+    .home h3 {
+        font-size: 25px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content,
+    .about img {
+        max-width: 100%;
+        object-fit: cover;
+        padding: 10px;
+        border-radius: 40px;
+    }
+
+    .services h1 {
+        font-size: 45px;
     }
 
     .service-containers,
@@ -503,4 +599,162 @@ footer{
         flex-direction: column;
         gap: 20px;
     }
+
+    .service {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 90%;
+    }
+
+    .packages-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .footercontact h3 {
+        font-size: 20px;
+    }
+
+    .contact-icon a {
+        font-size: 3rem;
+    }
 }
+
+
+
+@media (max-width: 414px) {
+    header {
+        padding: 2rem 3%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-top: 0.1rem solid black;
+        box-shadow: 0 0.5rem 1rem black;
+        z-index: 100;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 1rem 0;
+        color: black;
+    }
+
+    .home {
+        padding-top: 8rem; 
+    }
+
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home h3 {
+        font-size: 20px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content,
+    .about img {
+        max-width: 100%;
+        object-fit: cover;
+        padding: 10px;
+        border-radius: 40px;
+    }
+
+    .services h1 {
+        font-size: 40px;
+    }
+
+    .service-containers,
+    .other-services .service-containers {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 90%;
+    }
+
+    .packages-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .footercontact h3 {
+        font-size: 20px;
+    }
+
+    .contact-icon a {
+        font-size: 3rem;
+    }
+}
+
