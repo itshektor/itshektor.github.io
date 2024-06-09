@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/1613685-200.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description" content="Party Time - The best party organisers in Pristina. We provide theme events, marquee events, special celebrations, and more. Contact us to make your event unforgettable.">
+    <meta name="keywords" content="Party Time, party organisers, events, theme events, marquee events, special celebrations, Pristina, best parties, event planning">
+    <meta name="author" content="Party Time">
+    <meta name="robots" content="index, follow">
 </head>
 <body>
     <div class="forBackground">
@@ -134,14 +138,16 @@
 
     <section class="contact" id="contact">
         <h2>Contact</h2>
-        <form class="contact-form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" >
+        
             <div class="form-group">
-                <input type="text" id="first-name" placeholder="Enter Name:">
-                <input type="text" id="last-name" placeholder="Enter Surname:">
+                <input type="hidden" name="access_key" value="4333785f-09b5-4a89-9513-f035406c7c12">
+                <input type="text" name="first-name" id="first-name" placeholder="Enter Name:">
+                <input type="text" name="last-name" id="last-name" placeholder="Enter Surname:">
             </div>
-            <input type="email" id="email" placeholder="Enter email:">
-            <input type="tel" id="phone" placeholder="Enter phone number:">
-            <textarea id="message" placeholder="Message:"></textarea>
+            <input type="email" name="email" id="email" placeholder="Enter email:">
+            <input type="tel" name="phone-number" id="phone" placeholder="Enter phone number:">
+            <textarea name="message" id="message" placeholder="Message:"></textarea>
             <button type="submit">Submit</button>
         </form>
         <section class="footercontact">
@@ -158,7 +164,7 @@
         </footer>
     
     </section>
-    
+   
     <script src="script.js"></script>
 
 </body>
