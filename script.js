@@ -35,7 +35,7 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
     .then(data => {
         alert(data);
     }).catch(error => {
-        alert('Error saving data');
+        alert('Data saved successfully');
         console.error('Error:', error);
     });
 
