@@ -5,7 +5,7 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
-    
+
 document.querySelector('.contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -24,17 +24,21 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
         date: new Date().toISOString()
     };
 
-    // Retrieve existing data from local storage
-    let contactList = JSON.parse(localStorage.getItem('contactList')) || [];
+   
+    fetch('http://localhost:3000/submit-form', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(contactData)
+    }).then(response => response.text())
+    .then(data => {
+        alert(data);
+    }).catch(error => {
+        alert('Error saving data');
+        console.error('Error:', error);
+    });
 
-    // Add new contact data
-    contactList.push(contactData);
-
-    // Save updated data back to local storage
-    localStorage.setItem('contactList', JSON.stringify(contactList));
-
-    alert('Message saved locally!');
-
-    // Optionally, clear the form
+   
     document.querySelector('.contact-form').reset();
 });
