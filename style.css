@@ -382,7 +382,8 @@ footer{
 
 
 
-@media(max-width: 1200px) {
+
+@media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
@@ -427,7 +428,7 @@ footer{
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 70px; 
+        top: 70px;
         left: 0;
         width: 100%;
         padding: 1rem;
@@ -449,7 +450,8 @@ footer{
     }
 
     .home {
-        padding-top: 8rem; 
+        padding-top: 8rem;
+    }
 
     .home h1 {
         font-size: 50px;
@@ -520,8 +522,6 @@ footer{
     .contact-icon a {
         font-size: 3rem;
     }
-
-}
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -544,7 +544,7 @@ footer{
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 70px; 
+        top: 70px;
         left: 0;
         width: 100%;
         padding: 1rem;
@@ -566,7 +566,7 @@ footer{
     }
 
     .home {
-        padding-top: 7rem; 
+        padding-top: 7rem;
     }
 
     .home h1 {
@@ -640,8 +640,6 @@ footer{
     }
 }
 
-
-
 @media (max-width: 414px) {
     header {
         padding: 2rem 3%;
@@ -684,7 +682,7 @@ footer{
     }
 
     .home {
-        padding-top: 8rem; 
+        padding-top: 8rem;
     }
 
     .home h1 {
@@ -757,4 +755,3 @@ footer{
         font-size: 3rem;
     }
 }
-
