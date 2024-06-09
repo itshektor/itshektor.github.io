@@ -24,7 +24,7 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
         date: new Date().toISOString()
     };
 
-   
+    // Send the data to your server
     fetch('http://localhost:3000/submit-form', {
         method: 'POST',
         headers: {
@@ -39,6 +39,6 @@ document.querySelector('.contact-form').addEventListener('submit', function(even
         console.error('Error:', error);
     });
 
-   
+    // Optionally, clear the form
     document.querySelector('.contact-form').reset();
 });
